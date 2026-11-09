@@ -1,0 +1,328 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    /* Tema Pierna (default) */
+    --color-principal:#9AD7B0;
+    --color-secundario:#F5FFF8;
+    --color-acento:#5FAF74;
+
+    --color-blanco:#FFFFFF;
+    --color-texto:#3D3D3D;
+
+    --color-amor:#FFB3C7;
+    --color-logro:#FFE6A7;
+
+    --sombra:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+/* =========================
+   TEMAS
+========================= */
+
+.tema-pierna{
+    --color-principal:#9AD7B0;
+    --color-secundario:#F5FFF8;
+    --color-acento:#5FAF74;
+}
+
+.tema-espalda{
+    --color-principal:#B8E3F5;
+    --color-secundario:#F4FBFF;
+    --color-acento:#5AA8D8;
+}
+
+.tema-fuerza{
+    --color-principal:#F8B7C4;
+    --color-secundario:#FFF4F7;
+    --color-acento:#E46C8A;
+}
+
+.tema-funcional{
+    --color-principal:#FFD5A8;
+    --color-secundario:#FFF7EF;
+    --color-acento:#F49B42;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:var(--color-secundario);
+    color:var(--color-texto);
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--color-principal),
+        var(--color-acento)
+    );
+
+    padding:50px 20px;
+    text-align:center;
+    color:white;
+}
+
+header h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    opacity:.95;
+}
+
+
+/* =========================
+   MENSAJES
+========================= */
+
+.mensaje{
+    background:white;
+    max-width:1100px;
+    margin:25px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--sombra);
+}
+
+.motivacion{
+    border-left:8px solid var(--color-acento);
+}
+
+.amor{
+    border-left:8px solid var(--color-amor);
+}
+
+.mensaje h2{
+    margin-bottom:10px;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* =========================
+   EJERCICIOS
+========================= */
+
+.ejercicio{
+    background:white;
+    margin:35px 0;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:var(--sombra);
+}
+
+.ejercicio h2{
+    color:var(--color-acento);
+    margin-bottom:20px;
+}
+
+.stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.stat{
+
+    background:var(--color-secundario);
+    padding:15px;
+    min-width:120px;
+    border-radius:15px;
+}
+
+.stat span{
+    display:block;
+    color:#777;
+    font-size:.8rem;
+}
+
+.stat strong{
+    font-size:1.1rem;
+}
+
+
+.imagenes{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.imagenes img{
+    flex:1 1 400px;
+    width:100%;
+    max-width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+
+    transition:.3s ease;
+}
+
+.imagenes img:hover{
+    transform:scale(1.02);
+}
+
+.placeholder{
+
+    flex:1;
+    min-width:280px;
+
+    height:250px;
+
+    border:3px dashed #cfd8dc;
+
+    border-radius:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#90A4AE;
+
+    background:#fafafa;
+}
+
+
+/* =========================
+   BOTON YOUTUBE
+========================= */
+
+.boton-video{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#ff0000;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.boton-video:hover{
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   VARIANTE
+========================= */
+
+.variante{
+
+    margin-top:30px;
+
+    background:var(--color-secundario);
+
+    border-left:6px solid var(--color-acento);
+
+    border-radius:15px;
+
+    padding:20px;
+}
+
+.variante h3{
+    margin-bottom:15px;
+}
+
+
+/* =========================
+   SECUNDARIO
+========================= */
+
+.secundario{
+
+    border:3px solid #FFD166;
+}
+
+
+/* =========================
+   LOGRO FINAL
+========================= */
+
+.logro{
+
+    margin:50px 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--color-logro),
+        #fff8db
+    );
+
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+}
+
+.logro h2{
+    margin-bottom:15px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .imagenes{
+        flex-direction:column;
+    }
+
+}
