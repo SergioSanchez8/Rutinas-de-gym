@@ -428,3 +428,103 @@ header h1{
     transform:translateY(-2px);
 
 }
+
+
+/* =========================
+   RESUMEN DE RUTINA
+========================= */
+
+.resumen-rutina{
+
+    background:var(--color-blanco);
+    width:90%;
+    max-width:1200px;
+    margin:25px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--sombra);
+}
+
+.resumen-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:20px;
+}
+
+.resumen-header h2{
+
+    color:var(--color-acento);
+}
+
+.badge-rutina{
+
+    background:var(--color-acento);
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-weight:bold;
+}
+
+.objetivos-rutina{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px,1fr)
+        );
+
+    gap:10px;
+
+    margin-top:25px;
+}
+
+.objetivo-card{
+
+    background:white;
+
+    text-align:center;
+
+    padding:10px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.objetivo-card:hover{
+
+    transform:translateY(-4px);
+}
+
+.objetivo-card span{
+
+    font-size:2rem;
+
+    display:block;
+
+    margin-bottom:10px;
+}
+
+.objetivo-card h3{
+
+    color:var(--color-acento);
+
+    margin-bottom:2px;
+}
