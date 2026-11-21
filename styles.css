@@ -61,7 +61,7 @@
 .tema-choco{
 
     --color-principal:#5B3A8E;
-    --color-secundario:#1F1B24;
+    --color-secundario:#f0e4ff;
     --color-acento:#B794F4;
     --color-blanco:#2B2430;
     --color-texto:#322c2c;
@@ -202,20 +202,17 @@ header h1{
     gap:20px;
     flex-wrap:wrap;
     margin-bottom:25px;
+    justify-content: center;
+    align-items: center;
 }
 
 .imagenes img{
     flex:1 1 0;
-
     width:100%;
-    max-width:100%;
-
+    max-width:50%;
     height:auto;
-
     display:block;
-
     border-radius:20px;
-
     box-shadow:0 5px 15px rgba(0,0,0,.10);
 }
 
@@ -254,7 +251,7 @@ header h1{
 
     color:white;
 
-    background:#ff0000;
+    background:var(--color-acento);
 
     padding:12px 20px;
 
@@ -463,6 +460,108 @@ header h1{
 .resumen-header h2{
 
     color:var(--color-acento);
+}
+
+/* =========================
+   CRONOGRAMA SEMANAL
+========================= */
+
+.cronograma-semanal{
+    margin-bottom:35px;
+    padding:30px;
+    background:var(--color-blanco);
+    border-top:6px solid var(--color-principal);
+    border-radius:25px;
+    box-shadow:var(--sombra);
+}
+
+.cronograma-semanal > h2{
+    margin-bottom:8px;
+    color:var(--color-principal);
+}
+
+.descripcion-cronograma{
+    margin-bottom:22px;
+}
+
+.opciones-cronograma{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px;
+}
+
+.opcion-cronograma{
+    padding:22px;
+    background:#F8F5FC;
+    border:1px solid #E8DDF7;
+    border-radius:20px;
+}
+
+.opcion-cronograma h3{
+    margin-bottom:12px;
+    color:#5B3A8E;
+    font-size:1.25rem;
+}
+
+.lista-dias-cronograma{
+    list-style:none;
+}
+
+.dia-cronograma{
+    display:grid;
+    grid-template-columns:90px minmax(0,1fr);
+    align-items:center;
+    gap:10px;
+    padding:11px 0;
+    border-bottom:1px solid #E8E1ED;
+}
+
+.dia-cronograma:last-child{
+    border-bottom:0;
+}
+
+.nombre-dia-cronograma{
+    font-weight:600;
+}
+
+.enlace-dia-cronograma{
+    color:#5B3A8E;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.enlace-dia-cronograma:hover{
+    color:#3F246B;
+    text-decoration:underline;
+}
+
+.enlace-dia-cronograma:focus-visible{
+    outline:3px solid var(--color-principal);
+    outline-offset:3px;
+}
+
+.descanso-cronograma{
+    color:#68616D;
+}
+
+@media(max-width:768px){
+    .cronograma-semanal{
+        padding:22px;
+    }
+
+    .opcion-cronograma{
+        padding:18px;
+    }
+
+    .opciones-cronograma{
+        grid-template-columns:1fr;
+    }
+
+    .dia-cronograma{
+        grid-template-columns:82px minmax(0,1fr);
+        gap:8px;
+    }
 }
 
 .badge-rutina{
